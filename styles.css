@@ -1,0 +1,27 @@
+html {
+    background-color: gray;
+}
+
+.calculator {
+    padding-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 550px;
+    background-color: blue;
+}
+
+#display {
+    background-color: white;
+    width: 523px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#display-text {
+    text-align: center;
+    font-size: 50px;
+    
+}
