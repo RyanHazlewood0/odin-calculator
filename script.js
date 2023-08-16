@@ -32,3 +32,36 @@ return add(num1, num2)
     return divide(num1, num2)
 }
 }
+
+const displayText = document.getElementById('display-text')
+let displayValue = ''
+
+function updateDisplay(e) {
+    const buttonText = e.target.textContent
+    displayValue += buttonText
+    displayText.textContent = displayValue
+    
+}
+
+const numberButtons = document.querySelectorAll('.num-btns')
+
+numberButtons.forEach(button => {
+    button.addEventListener('click', updateDisplay)
+})
+
+const plusBtn = document.getElementById('plus-btn')
+const minusBtn = document.getElementById('minus-btn')
+const multiplyBtn = document.getElementById('multiply-btn')
+const divideBtn = document.getElementById('divide-btn')
+
+function handleOperatorClick(event) {
+    firstNum = parseFloat(displayText.textContent);
+    operator = event.target.textContent;
+    displayText.textContent = '';
+}
+
+plusBtn.addEventListener('click', handleOperatorClick);
+minusBtn.addEventListener('click', handleOperatorClick);
+multiplyBtn.addEventListener('click', handleOperatorClick);
+divideBtn.addEventListener('click', handleOperatorClick);
+
