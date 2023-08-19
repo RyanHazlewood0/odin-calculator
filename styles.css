@@ -33,3 +33,35 @@ html {
     font-size: 50px;
     
 }
+
+.button-container {
+    height: 440px;
+    width: 585px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.num-btns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.num-btns button {
+    font-size: 25px;
+    height: 80px;
+    width: 195px;
+}
+
+#other-btns button {
+font-size: 25px;
+    height: 90px;
+    width: 143px;
+}
+
+#operator-btns button{
+    font-size: 25px;
+    height: 90px;
+    width: 143px;
+}
+
