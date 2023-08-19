@@ -8,15 +8,23 @@ html {
     margin-right: auto;
     width: 600px;
     height: 550px;
-    background-color: blue;
+    background-color: gray;
+    border-radius: 5px;
+    border: solid black;
+    border-width: 3px;
 }
 
 #display {
-    background-color: white;
-    width: 523px;
+    background-color: darkgray;
+    width: 575px;
     height: 100px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 5px;
+    border: solid black;
+    border-width: 3px;
+    margin-top: 7px;
+    margin-bottom: 7px;
     
 }
 

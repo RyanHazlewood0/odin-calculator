@@ -14,9 +14,22 @@ const divide = function(a, b) {
     return a / b
 }
 
+const plusBtn = document.getElementById('plus-btn')
+const minusBtn = document.getElementById('minus-btn')
+const multiplyBtn = document.getElementById('multiply-btn')
+const divideBtn = document.getElementById('divide-btn')
+const equalsBtn = document.getElementById('equals-btn')
+const clearBtn = document.getElementById('clear-btn')
+
 let firstNum 
 let secondNum 
 let operator 
+
+plusBtn.addEventListener('click', handleOperatorClick);
+minusBtn.addEventListener('click', handleOperatorClick);
+multiplyBtn.addEventListener('click', handleOperatorClick);
+divideBtn.addEventListener('click', handleOperatorClick);
+equalsBtn.addEventListener('click', handleEqualsClick)
 
 let operate = function(operator, num1, num2) {
 if (operator === '+') {
@@ -49,13 +62,6 @@ numberButtons.forEach(button => {
     button.addEventListener('click', updateDisplay)
 })
 
-const plusBtn = document.getElementById('plus-btn')
-const minusBtn = document.getElementById('minus-btn')
-const multiplyBtn = document.getElementById('multiply-btn')
-const divideBtn = document.getElementById('divide-btn')
-const equalsBtn = document.getElementById('equals-btn')
-const clearBtn = document.getElementById('clear-btn')
-
 clearBtn.addEventListener('click', function() {
 displayText.textContent = ''
 displayValue = ''
@@ -68,11 +74,6 @@ function handleOperatorClick(event) {
     displayValue = ''
 }
 
-plusBtn.addEventListener('click', handleOperatorClick);
-minusBtn.addEventListener('click', handleOperatorClick);
-multiplyBtn.addEventListener('click', handleOperatorClick);
-divideBtn.addEventListener('click', handleOperatorClick);
-
 function handleEqualsClick() {
     secondNum = parseFloat(displayText.textContent);
     let result = operate(operator, firstNum, secondNum)
@@ -83,4 +84,3 @@ function handleEqualsClick() {
     displayValue = result
 }
 
-equalsBtn.addEventListener('click', handleEqualsClick)
