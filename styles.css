@@ -7,7 +7,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     width: 600px;
-    height: 550px;
+    height: 650px;
     background-color: gray;
     border-radius: 5px;
     border: solid black;
@@ -35,7 +35,7 @@ html {
 }
 
 .button-container {
-    height: 440px;
+    height: 540px;
     width: 585px;
     margin-left: auto;
     margin-right: auto;
@@ -51,16 +51,24 @@ html {
     font-size: 25px;
     height: 80px;
     width: 195px;
+    font-weight: bold;
 }
 
-#other-btns button {
-font-size: 25px;
-    height: 90px;
-    width: 143px;
-}
 
 #operator-btns button{
+    font-weight: bold;
     font-size: 25px;
-    height: 90px;
+    height: 95px;
     width: 143px;
+}
+
+#zero-btn {
+    width: 600px;
+}
+
+#decimal-btn, #equals-btn, #clear-btn {
+    width: 192px;
+    height: 100px;
+    font-size: 20px;
+    font-weight: bold;
 }
