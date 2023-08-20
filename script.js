@@ -58,6 +58,20 @@ return add(num1, num2)
 }
 }
 
+function handleOperatorClick(event) {
+    if (firstNum && displayText.textContent && operator) {
+        secondNum = parseFloat(displayText.textContent);
+        let result = operate(operator, firstNum, secondNum);
+        displayText.textContent = result;
+        firstNum = result;
+    } else if (!firstNum) {
+        firstNum = parseFloat(displayText.textContent);
+    }
+    operator = event.target.textContent;
+    displayText.textContent = '';
+    displayValue = ''; 
+}
+
 function updateDisplay(e) {
     const buttonText = e.target.textContent
     displayValue += buttonText
@@ -76,20 +90,6 @@ firstNum = null;
 secondNum = null;
 operator = null;
 })
-
-function handleOperatorClick(event) {
-    if (firstNum && displayText.textContent && operator) {
-        secondNum = parseFloat(displayText.textContent);
-        let result = operate(operator, firstNum, secondNum);
-        displayText.textContent = result;
-        firstNum = result;
-    } else if (!firstNum) {
-        firstNum = parseFloat(displayText.textContent);
-    }
-    operator = event.target.textContent;
-    displayText.textContent = '';
-    displayValue = ''; 
-}
 
 
 function handleEqualsClick() {
